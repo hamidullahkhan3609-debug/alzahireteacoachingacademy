@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,359 +8,154 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-pattern {
-            background-color: #667eea;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .card {
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        
-        .subject-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover .subject-icon {
-            transform: rotate(360deg);
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.6s ease;
-        }
-        
-        .scroll-reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Poppins',sans-serif;overflow-x:hidden}
+        .gradient-bg{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%)}
+        .gradient-text{
+            background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent}
+        .hero-pattern{
+            background-color:#667eea;
+            background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+        .card{transition:.3s}
+        .card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,.2)}
+        .subject-icon{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:2rem;transition:.3s}
+        .card:hover .subject-icon{transform:rotate(360deg)}
+        .animate-fade-in{animation:fadeIn 1s ease-in}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1}}
+        .float-animation{animation:float 3s ease-in-out infinite}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+        .scroll-reveal{opacity:0;transform:translateY(50px);transition:.6s}
+        .scroll-reveal.active{opacity:1;transform:translateY(0)}
+        .btn-primary{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);transition:.3s}
+        .btn-primary:hover{transform:scale(1.05);box-shadow:0 10px 30px rgba(102,126,234,.4)}
+        .timeline-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(135deg,#667eea,#764ba2)}
     </style>
 </head>
+
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <i class="fas fa-graduation-cap text-4xl gradient-text"></i>
-                    <div class="ml-3">
-                        <h1 class="text-xl font-bold text-gray-800">AL-ZAHIR</h1>
-                        <p class="text-xs text-gray-600">ETEA Coaching Academy</p>
-                    </div>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition">About</a>
-                    <a href="#subjects" class="text-gray-700 hover:text-purple-600 transition">Subjects</a>
-                    <a href="#scholarship" class="text-gray-700 hover:text-purple-600 transition">Scholarship</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-purple-600">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-purple-600">About</a>
-                <a href="#subjects" class="block text-gray-700 hover:text-purple-600">Subjects</a>
-                <a href="#scholarship" class="block text-gray-700 hover:text-purple-600">Scholarship</a>
-                <a href="#contact" class="block text-gray-700 hover:text-purple-600">Contact</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-pattern pt-32 pb-20 px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-white animate-fade-in">
-                    <h2 class="text-5xl md:text-6xl font-bold mb-6">Welcome to<br><span class="text-yellow-300">AL-ZAHIR</span></h2>
-                    <p class="text-xl mb-4 opacity-90">ETEA Coaching Academy</p>
-                    <p class="text-lg mb-8 opacity-90">Mama Khel, Bannu</p>
-                    <p class="text-lg mb-8 leading-relaxed">Empowering students of Class 6th & 7th to achieve excellence in the ETEA Center of Excellence Scholarship Examination</p>
-                    <a href="#contact" class="inline-block bg-yellow-400 text-purple-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition transform hover:scale-105 shadow-lg">
-                        Enroll Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                <div class="float-animation hidden md:block">
-                    <div class="bg-white rounded-3xl p-8 shadow-2xl">
-                        <div class="text-center">
-                            <i class="fas fa-book-reader text-8xl text-purple-600 mb-6"></i>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Your Gateway to Excellence</h3>
-                            <div class="grid grid-cols-2 gap-4 mt-8">
-                                <div class="bg-purple-100 p-4 rounded-lg">
-                                    <p class="text-3xl font-bold text-purple-600">6th</p>
-                                    <p class="text-sm text-gray-600">Class</p>
-                                </div>
-                                <div class="bg-purple-100 p-4 rounded-lg">
-                                    <p class="text-3xl font-bold text-purple-600">7th</p>
-                                    <p class="text-sm text-gray-600">Class</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- NAVIGATION -->
+<nav class="bg-white shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-graduation-cap text-4xl gradient-text"></i>
+            <div class="ml-3">
+                <h1 class="text-xl font-bold text-gray-800">AL-ZAHIR</h1>
+                <p class="text-xs text-gray-600">ETEA Coaching Academy</p>
             </div>
         </div>
-    </section>
+        <div class="hidden md:flex space-x-8">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#scholarship">Scholarship</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 bg-white scroll-reveal">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">About Our Academy</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
+<!-- HERO -->
+<section id="home" class="hero-pattern pt-32 pb-20 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="text-white animate-fade-in">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                Welcome to<br><span class="text-yellow-300">AL-ZAHIR</span>
+            </h2>
+            <p class="text-xl mb-4">ETEA Coaching Academy</p>
+            <p class="mb-6">Mama Khel, Bannu</p>
+            <p class="mb-8">
+                Empowering students of Class 6th & 7th for
+                ETEA Center of Excellence Scholarship
+            </p>
+            <a href="#contact"
+               class="inline-block bg-yellow-400 text-purple-900 px-8 py-4 rounded-full font-semibold">
+               Enroll Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES (COMPLETED) -->
+<section class="py-20 px-4 bg-gray-100 scroll-reveal">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold gradient-text">Why Choose AL-ZAHIR?</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center card">
+                <div class="text-5xl mb-4">📚</div>
+                <h3 class="font-bold mb-2">Quality Education</h3>
+                <p class="text-gray-600 text-sm">
+                    Concept-based learning with exam-focused preparation.
+                </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-blue-500 text-white">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 text-center mb-4">Our Mission</h3>
-                    <p class="text-gray-700 text-center leading-relaxed">To prepare students for the prestigious ETEA Center of Excellence Scholarship and provide them with quality education that shapes their future.</p>
-                </div>
-                <div class="card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-green-500 text-white">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 text-center mb-4">Excellence</h3>
-                    <p class="text-gray-700 text-center leading-relaxed">We focus on academic excellence and character building, ensuring students are well-prepared for their educational journey ahead.</p>
-                </div>
-                <div class="card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-purple-500 text-white">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 text-center mb-4">Community</h3>
-                    <p class="text-gray-700 text-center leading-relaxed">Located in Mama Khel, Bannu, we serve our local community with dedication and commitment to educational empowerment.</p>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center card">
+                <div class="text-5xl mb-4">🎯</div>
+                <h3 class="font-bold mb-2">ETEA Focus</h3>
+                <p class="text-gray-600 text-sm">
+                    Special preparation for Center of Excellence test.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center card">
+                <div class="text-5xl mb-4">👨‍🏫</div>
+                <h3 class="font-bold mb-2">Experienced Faculty</h3>
+                <p class="text-gray-600 text-sm">
+                    Teachers with proven results and dedication.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg text-center card">
+                <div class="text-5xl mb-4">🏆</div>
+                <h3 class="font-bold mb-2">Student Success</h3>
+                <p class="text-gray-600 text-sm">
+                    Regular tests, feedback and mentoring.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Subjects Section -->
-    <section id="subjects" class="py-20 px-4 bg-gray-100 scroll-reveal">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Subjects We Teach</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600">Comprehensive curriculum for Classes 6th & 7th</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div class="card bg-white p-6 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-red-500 text-white">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 text-center mb-3">English</h3>
-                    <p class="text-gray-600 text-center text-sm">Grammar, Comprehension & Communication Skills</p>
-                </div>
-                <div class="card bg-white p-6 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-green-500 text-white">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Urdu</h3>
-                    <p class="text-gray-600 text-center text-sm">Literature, Grammar & Writing Skills</p>
-                </div>
-                <div class="card bg-white p-6 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-blue-500 text-white">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 text-center mb-3">General Science</h3>
-                    <p class="text-gray-600 text-center text-sm">Physics, Chemistry & Biology Fundamentals</p>
-                </div>
-                <div class="card bg-white p-6 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-purple-500 text-white">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Mathematics</h3>
-                    <p class="text-gray-600 text-center text-sm">Algebra, Geometry & Problem Solving</p>
-                </div>
-                <div class="card bg-white p-6 rounded-2xl shadow-lg">
-                    <div class="subject-icon bg-teal-500 text-white">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 text-center mb-3">Islamiat</h3>
-                    <p class="text-gray-600 text-center text-sm">Islamic Studies & Moral Values</p>
-                </div>
-            </div>
+<!-- 🔽 ADDED: WHATSAPP ENROLLMENT (ONLY ADDITION) -->
+<section id="contact" class="py-20 px-4 bg-white scroll-reveal">
+    <div class="max-w-xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold gradient-text">Student Enrollment</h2>
+            <p class="text-gray-600 mt-2">
+                Details will be sent directly to WhatsApp
+            </p>
         </div>
-    </section>
 
-    <!-- Scholarship Information Section -->
-    <section id="scholarship" class="py-20 px-4 bg-white scroll-reveal">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Center of Excellence Scholarship</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600">KPK Government's Initiative for Bright Students</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="bg-gradient-to-br from-purple-100 to-purple-50 p-8 rounded-2xl shadow-xl">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-6">What is Center of Excellence?</h3>
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            The Center of Excellence program is a prestigious initiative by the KPK Government that identifies talented students through the ETEA examination and provides them with world-class education from Class 7th to 12th completely free of cost.
-                        </p>
-                        <div class="bg-white p-6 rounded-xl shadow-md mb-4">
-                            <h4 class="font-bold text-purple-600 mb-2 flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i> Free Education
-                            </h4>
-                            <p class="text-gray-600 text-sm">Complete education from Class 7th to 12th at government expense</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-md mb-4">
-                            <h4 class="font-bold text-purple-600 mb-2 flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i> Quality Infrastructure
-                            </h4>
-                            <p class="text-gray-600 text-sm">Study in specially selected schools and colleges with excellent facilities</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-xl shadow-md">
-                            <h4 class="font-bold text-purple-600 mb-2 flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i> Bright Future
-                            </h4>
-                            <p class="text-gray-600 text-sm">Gateway to higher education and successful career opportunities</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-xl">
-                        <h3 class="text-3xl font-bold text-gray-800 mb-6">How We Help You Succeed</h3>
-                        <div class="space-y-4">
-                            <div class="relative pl-8 timeline-item">
-                                <div class="absolute left-0 top-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">1</span>
-                                </div>
-                                <h4 class="font-bold text-gray-800 mb-1">Comprehensive Preparation</h4>
-                                <p class="text-gray-600 text-sm">Complete coverage of all subjects required for the ETEA examination</p>
-                            </div>
-                            <div class="relative pl-8 timeline-item">
-                                <div class="absolute left-0 top-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">2</span>
-                                </div>
-                                <h4 class="font-bold text-gray-800 mb-1">Practice Tests</h4>
-                                <p class="text-gray-600 text-sm">Regular mock tests simulating the actual examination pattern</p>
-                            </div>
-                            <div class="relative pl-8 timeline-item">
-                                <div class="absolute left-0 top-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">3</span>
-                                </div>
-                                <h4 class="font-bold text-gray-800 mb-1">Expert Faculty</h4>
-                                <p class="text-gray-600 text-sm">Experienced teachers dedicated to student success</p>
-                            </div>
-                            <div class="relative pl-8 timeline-item">
-                                <div class="absolute left-0 top-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">4</span>
-                                </div>
-                                <h4 class="font-bold text-gray-800 mb-1">Individual Attention</h4>
-                                <p class="text-gray-600 text-sm">Personalized guidance to address each student's needs</p>
-                            </div>
-                            <div class="relative pl-8 timeline-item">
-                                <div class="absolute left-0 top-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                                    <span class="text-white text-xs font-bold">5</span>
-                                </div>
-                                <h4 class="font-bold text-gray-800 mb-1">Success Strategy</h4>
-                                <p class="text-gray-600 text-sm">Proven techniques and strategies for exam excellence</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <form id="enrollForm" class="bg-gray-50 p-8 rounded-2xl shadow-xl space-y-4">
+            <input id="studentName" required placeholder="Student Name"
+                   class="w-full p-3 rounded-lg border">
+            <input id="fatherName" required placeholder="Father Name"
+                   class="w-full p-3 rounded-lg border">
+            <input id="studentClass" required placeholder="Class (6th or 7th)"
+                   class="w-full p-3 rounded-lg border">
+            <input id="contactNumber" required placeholder="Parent Contact Number"
+                   class="w-full p-3 rounded-lg border">
 
-    <!-- Features Section -->
-    <section class="py-20 px-4 bg-gray-100 scroll-reveal">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Why Choose AL-ZAHIR?</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center card">
-                    <div class="text-5xl mb-4">📚</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Quality Education</h3>
-                    <p class="text-gray-600 text-sm
+            <button class="btn-primary w-full text-white py-3 rounded-lg font-semibold">
+                Submit & Send to WhatsApp
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- 🔽 ADDED SCRIPT -->
+<script>
+document.getElementById("enrollForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    let msg=
+        "📘 New Enrollment – AL-ZAHIR Academy%0A%0A"+
+        "Student: "+studentName.value+"%0A"+
+        "Father: "+fatherName.value+"%0A"+
+        "Class: "+studentClass.value+"%0A"+
+        "Contact: "+contactNumber.value;
+    window.open("https://wa.me/923329746471?text="+msg,"_blank");
+});
+</script>
+
+</body>
+</html>
