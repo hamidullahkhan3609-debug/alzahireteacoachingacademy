@@ -5,179 +5,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AL-ZAHIR ETEA Coaching Academy</title>
 
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
-body { font-family: 'Poppins', sans-serif; }
-.gradient {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-}
-.gradient-text {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.card {
-    transition: all 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 40px rgba(0,0,0,0.15);
-}
-.btn {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-}
-.btn:hover {
-    transform: scale(1.05);
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body{font-family:'Poppins',sans-serif}
+.gradient-bg{background:linear-gradient(135deg,#667eea,#764ba2)}
+.gradient-text{background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-pattern{background:#667eea}
+.btn-primary{background:linear-gradient(135deg,#667eea,#764ba2)}
 </style>
 </head>
 
 <body class="bg-gray-50">
 
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-white shadow z-50">
-  <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <i class="fas fa-graduation-cap text-4xl gradient-text"></i>
-      <div>
-        <h1 class="font-bold text-xl">AL-ZAHIR</h1>
-        <p class="text-xs text-gray-500">ETEA Coaching Academy</p>
-      </div>
-    </div>
-    <div class="hidden md:flex gap-8 font-medium">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#subjects">Subjects</a>
-      <a href="#features">Why Us</a>
-      <a href="#enroll">Enroll</a>
-    </div>
-  </div>
+<!-- HEADER -->
+<nav class="bg-white fixed w-full shadow z-50">
+<div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+<div class="flex items-center">
+<i class="fas fa-graduation-cap text-4xl gradient-text"></i>
+<div class="ml-3">
+<h1 class="font-bold text-xl">AL-ZAHIR</h1>
+<p class="text-xs text-gray-600">ETEA Coaching Academy</p>
+</div>
+</div>
+</div>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="gradient text-white pt-36 pb-24 px-4">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <h2 class="text-5xl md:text-6xl font-bold mb-6">
-        Build Your Future with <br>
-        <span class="text-yellow-300">AL-ZAHIR</span>
-      </h2>
-      <p class="text-xl mb-4">ETEA Center of Excellence Preparation</p>
-      <p class="mb-8">Special coaching for Class 6th & 7th students in Mama Khel, Bannu.</p>
-      <a href="#enroll" class="inline-block bg-yellow-400 text-purple-900 px-8 py-4 rounded-full font-semibold">
-        Enroll Now <i class="fas fa-arrow-right ml-2"></i>
-      </a>
-    </div>
-    <div class="hidden md:block text-center">
-      <i class="fas fa-book-open text-[220px] opacity-20"></i>
-    </div>
-  </div>
+<section class="hero-pattern pt-32 pb-20 text-white text-center">
+<h2 class="text-5xl font-bold mb-3">AL-ZAHIR ETEA Academy</h2>
+<p class="text-lg">Mama Khel, Bannu</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 px-4 bg-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-6 gradient-text">About Our Academy</h2>
-    <p class="text-gray-600 max-w-3xl mx-auto">
-      AL-ZAHIR ETEA Coaching Academy is dedicated to preparing talented students
-      for the ETEA Center of Excellence Scholarship through quality education,
-      discipline, and continuous assessment.
-    </p>
-  </div>
-</section>
+<!-- ENROLL -->
+<section class="py-20 px-4 bg-white">
+<div class="max-w-xl mx-auto">
+<h2 class="text-4xl font-bold text-center mb-6">
+<span class="gradient-text">WhatsApp Enrollment</span>
+</h2>
 
-<!-- SUBJECTS -->
-<section id="subjects" class="py-20 px-4 bg-gray-100">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Subjects We Teach</h2>
-    <div class="grid md:grid-cols-4 gap-8">
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <i class="fas fa-calculator text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold text-lg">Mathematics</h3>
-      </div>
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <i class="fas fa-flask text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold text-lg">Science</h3>
-      </div>
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <i class="fas fa-language text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold text-lg">English</h3>
-      </div>
-      <div class="card bg-white p-8 rounded-xl text-center">
-        <i class="fas fa-book text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold text-lg">General Knowledge</h3>
-      </div>
-    </div>
-  </div>
-</section>
+<form id="enrollForm" class="bg-gray-50 p-8 rounded-2xl shadow space-y-4">
+<input id="name" required placeholder="Student Name" class="w-full p-3 border rounded">
+<input id="father" required placeholder="Father Name" class="w-full p-3 border rounded">
+<input id="class" required placeholder="Class (6th / 7th)" class="w-full p-3 border rounded">
+<input id="phone" required placeholder="Contact Number" class="w-full p-3 border rounded">
 
-<!-- FEATURES -->
-<section id="features" class="py-20 px-4 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Why Choose Us?</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="card p-8 bg-gray-50 rounded-xl text-center">
-        <i class="fas fa-chalkboard-teacher text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold mb-2">Expert Teachers</h3>
-        <p class="text-gray-600 text-sm">Experienced and result-oriented faculty.</p>
-      </div>
-      <div class="card p-8 bg-gray-50 rounded-xl text-center">
-        <i class="fas fa-award text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold mb-2">Scholarship Focus</h3>
-        <p class="text-gray-600 text-sm">Complete preparation for ETEA tests.</p>
-      </div>
-      <div class="card p-8 bg-gray-50 rounded-xl text-center">
-        <i class="fas fa-users text-5xl text-purple-600 mb-4"></i>
-        <h3 class="font-bold mb-2">Student Care</h3>
-        <p class="text-gray-600 text-sm">Mentoring, testing & progress tracking.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ENROLLMENT -->
-<section id="enroll" class="py-20 px-4 bg-gray-100">
-  <div class="max-w-xl mx-auto">
-    <h2 class="text-4xl font-bold text-center mb-8 gradient-text">WhatsApp Enrollment</h2>
-
-    <form id="enrollForm" class="bg-white p-8 rounded-2xl shadow-xl space-y-4">
-      <input id="name" required placeholder="Student Name" class="w-full border p-3 rounded-lg">
-      <input id="father" required placeholder="Father Name" class="w-full border p-3 rounded-lg">
-      <input id="class" required placeholder="Class (6th / 7th)" class="w-full border p-3 rounded-lg">
-      <input id="phone" required placeholder="Parent Contact Number" class="w-full border p-3 rounded-lg">
-      <button class="btn text-white w-full py-3 rounded-lg font-semibold">
-        Submit & Send to WhatsApp
-      </button>
-    </form>
-  </div>
+<button class="btn-primary text-white w-full py-3 rounded font-semibold">
+Send on WhatsApp & Download PDF
+</button>
+</form>
+</div>
 </section>
 
 <!-- FOOTER -->
-<footer class="gradient text-white py-6 text-center">
-  <p>© 2026 AL-ZAHIR ETEA Coaching Academy | Mama Khel, Bannu</p>
+<footer class="gradient-bg text-white text-center py-6">
+© 2026 AL-ZAHIR ETEA Coaching Academy
 </footer>
 
-<!-- WHATSAPP SCRIPT -->
 <script>
-document.getElementById("enrollForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  const msg =
-    "📘 *New Enrollment – AL-ZAHIR Academy*%0A%0A" +
-    "👤 Student: " + name.value + "%0A" +
-    "👨 Father: " + father.value + "%0A" +
-    "🏫 Class: " + class.value + "%0A" +
-    "📞 Contact: " + phone.value;
+document.getElementById("enrollForm").onsubmit = function(e){
+e.preventDefault();
 
-  window.open("https://wa.me/923329746471?text=" + msg, "_blank");
-});
+const name = document.getElementById("name").value;
+const father = document.getElementById("father").value;
+const studentClass = document.getElementById("class").value;
+const phone = document.getElementById("phone").value;
+
+const whatsappNumber = "923329746471";
+
+const message =
+`📘 *New Enrollment*
+👤 Student: ${name}
+👨 Father: ${father}
+🏫 Class: ${studentClass}
+📞 Contact: ${phone}`;
+
+window.open(
+`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+"_blank"
+);
+
+// PDF GENERATION
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+
+doc.setFontSize(18);
+doc.text("AL-ZAHIR ETEA Coaching Academy", 20, 20);
+doc.setFontSize(12);
+doc.text("Mama Khel, Bannu", 20, 28);
+
+doc.line(20, 32, 190, 32);
+
+doc.setFontSize(14);
+doc.text("Registration Slip", 20, 42);
+
+doc.setFontSize(12);
+doc.text(`Student Name: ${name}`, 20, 55);
+doc.text(`Father Name: ${father}`, 20, 65);
+doc.text(`Class: ${studentClass}`, 20, 75);
+doc.text(`Contact: ${phone}`, 20, 85);
+
+doc.text("Status: Registered", 20, 100);
+doc.text("Please bring this slip on first day of class.", 20, 115);
+
+doc.text("Signature: ____________________", 20, 140);
+doc.text("Date: ____________________", 120, 140);
+
+doc.save(`AL-ZAHIR-Registration-${name}.pdf`);
+};
 </script>
 
 </body>
